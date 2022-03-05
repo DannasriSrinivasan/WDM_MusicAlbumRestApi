@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Student Name:   -->
+<html lang="en">
+  <head>
+    <title>A Music Web Application</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="music.js"></script>
+    <style>
+      form {text-align: center;}
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      p {
+        font-size: 20px;
+        font-weight: bold;
+        color: purple;
+      }
+      h3 {
+        font-variant: petite-caps;
+        color: darkred;
+        font-size: x-large;
+      }
+      li.topAlbums {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        word-wrap: break-word;
+        width: 320px;
+        height: 400px;
+      }
+      li.similarArtist {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        word-wrap: break-word;
+        width: 145px;
+        height: 230px;
+      }
+      input{
+        border-radius: 10px;
+        padding: 13px;
+        color: darkred;
+        font-weight: bold;
+        font-size: large;
+      }
+      </style>
+  </head>
+  <body style="background-color: beige;"> 
+    <form>
+       <label><h3>Artist Name: </h3><input type="text" id="form-input"/></label><br><br>
+       <input type="button"  onclick="sendRequest();" id ="form-button" class = "button1" value="Display Info" style ="font-variant: petite-caps;"/>
+       <script>
+        var input = document.getElementById("form-input");
+        input.addEventListener("keypress", function(event) {
+          if (event.keyCode === 13) {
+           event.preventDefault();
+           document.getElementById("form-button").click();
+          }
+        });
+        </script>
+      </form>
+    
+  </body>
+</html>
